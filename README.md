@@ -1,4 +1,4 @@
-# flutter_application_1
+# flutter application 1 (first app)
 
 Owner is Piratchai Khotma
 
