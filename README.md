@@ -1,5 +1,7 @@
 # flutter_application_1
 
+Owner is Piratchai Khotma
+
 A new Flutter project.
 
 ## Getting Started
