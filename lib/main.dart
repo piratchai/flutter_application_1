@@ -1,7 +1,11 @@
+// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, unused_import, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/CouterState.dart';
 
 // -- import local -- //
-import 'screens/SecondScreen.dart';
+import 'package:flutter_application_1/screens/FirstScreen.dart';
+import 'package:flutter_application_1/screens/LoginScreen.dart';
 
 void main() {
   runApp(MainApp());
@@ -10,31 +14,14 @@ void main() {
 const titleApp = "Welcome to Flutter App";
 
 class MainApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(title: titleApp, home: FirstRoute());
-  }
-}
-
-class FirstRoute extends StatelessWidget {
-  const FirstRoute({Key? key}) : super(key: key);
+  const MainApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('First Route'),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          child: Text('Open route'),
-          onPressed: () {
-            //print('Press Button');
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => SecondRoute()));
-          },
-        ),
-      ),
+    //return MaterialApp(title: titleApp, home: FirstRoute());
+    return MaterialApp(
+      title: titleApp,
+      home: LoginScreen(),
     );
   }
 }
