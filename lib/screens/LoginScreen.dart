@@ -38,34 +38,40 @@ class _LoginScreenState extends State<LoginScreen> {
           children: [
             // -- username -- //
             Center(
-              child: TextFormField(
-                controller: textUsernameController,
-                decoration: const InputDecoration(
-                  hintText: 'เพิ่มชื่อในการใช้งาน',
-                ),
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return "โปรดเพิ่มชื่อ";
-                  }
+              child: Padding(
+                padding: EdgeInsets.all(50),
+                child: TextFormField(
+                  controller: textUsernameController,
+                  decoration: const InputDecoration(
+                    hintText: 'เพิ่มชื่อในการใช้งาน',
+                  ),
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return "โปรดเพิ่มชื่อ";
+                    }
 
-                  return null;
-                },
+                    return null;
+                  },
+                ),
               ),
             ),
             // -- password -- //
             Center(
-              child: TextFormField(
-                controller: textPasswordController,
-                decoration: const InputDecoration(
-                  hintText: 'เพิ่มรหัสผ่านในการใช้งาน',
-                ),
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return "โปรดเพิ่มรหัสผ่าน";
-                  }
+              child: Padding(
+                padding: EdgeInsets.all(50),
+                child: TextFormField(
+                  controller: textPasswordController,
+                  decoration: const InputDecoration(
+                    hintText: 'เพิ่มรหัสผ่านในการใช้งาน',
+                  ),
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return "โปรดเพิ่มรหัสผ่าน";
+                    }
 
-                  return null;
-                },
+                    return null;
+                  },
+                ),
               ),
             ),
             // -- Submit Button -- //
@@ -91,6 +97,14 @@ class _LoginScreenState extends State<LoginScreen> {
                       return;
                     }
                   },
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.purple),
+                    padding: MaterialStateProperty.all(
+                        EdgeInsets.fromLTRB(30, 15, 30, 15)),
+                    textStyle: MaterialStateProperty.all(
+                      TextStyle(fontSize: 20),
+                    ),
+                  ),
                 ),
               ),
             ),
@@ -109,6 +123,15 @@ class _LoginScreenState extends State<LoginScreen> {
                         MaterialPageRoute(
                             builder: (context) => RegisteredScreen()));
                   },
+                  style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStateProperty.all(Colors.blueAccent),
+                    padding: MaterialStateProperty.all(
+                        EdgeInsets.fromLTRB(30, 15, 30, 15)),
+                    textStyle: MaterialStateProperty.all(
+                      TextStyle(fontSize: 20),
+                    ),
+                  ),
                 ),
               ),
             ),
