@@ -20,6 +20,15 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Home Screen'),
+        actions: [
+          IconButton(
+            onPressed: () {
+              ScaffoldMessenger.of(context)
+                  .showSnackBar(SnackBar(content: Text('No yet a actions.')));
+            },
+            icon: Icon(Icons.add),
+          ),
+        ],
       ),
       body: Center(
         child: Text(
